@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800');
+@font-face {
+  font-family: casino;
+  src: url(../fonts/budmojiggler.ttf);
+}
+body{
+    font-family:Poppins;
+    background-color:#006c00; 
+    background-image: url(../img/bg.jpg);
+    background-size: 100%;
+}
+*{
+	margin: 0;
+	padding: 0; 
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+.container h1{
+    text-align: center;
+    font-size: 62px;
+    margin-top:15px;
+    font-family: casino;
+    margin-bottom: 30px;
+    color: #a2490a;
+    animation:myfirst 1s;
+    -moz-animation:myfirst 1s infinite; /* Firefox */
+    -webkit-animation:myfirst 1s infinite; /* Safari and Chrome */
+}
+@-moz-keyframes myfirst  {
+    0% {color:orange;}
+    50% {color:#ff5200 ;}
+    100% {color:orange;}
+ 
+}
+@-webkit-keyframes myfirst
+{ 
+    0% {color:orange;}
+    50% {color:#ff5200 ;}
+    100% {color:orange;}
+}
+.container:after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+.container{
+    max-width: 1024px;
+   margin: 0 auto;
+   width: auto;
+   display: block;
+   float: none;
+   position: relative;
+   clear: both;
+}
+.diceimg{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.diceimg img{
+  width: 150px;
+}
+.score{
+    width:60%;
+    margin: auto;
+    float: none;
+    color: white;
+}
+.player{
+  width: 42%;
+  text-align: center;  
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+  background-color:#3f0d12;
+  background-image:linear-gradient(315deg, #3f0d12 0%, #c73b1f 74%);  
+  float: left;
+}
+.against{
+  float: left;
+  width: 10%;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.against img{
+  width: 100%;
+     margin-top: 100px;
+}
+.player1{ 
+    float: left; 
+} 
+.total{
+   padding: 15px 0px;
+}
+.player p {
+    padding: 10px 0px;
+    font-size: 19px;
+    background-color: #c73b1f;
+    color: #ffb356;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.player button{
+  padding: 8px 30px;
+  border-radius:20px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+  background-color:#ff5200;
+  color: white;
+  border:0px;
+  text-transform: capitalize;
+  font-weight:700;
+  margin-bottom: 15px;
+}
+.current{
+    padding-bottom: 20px;
+}
+
+.header{
+    margin-bottom: 40px;
+}
+.buttons{
+    text-align: center;
+    width: 100%;
+    display:inline-block;
+    margin-top:50px;
+    margin-bottom: 50px
+}
+.bttn button{
+  padding: 8px 30px;
+  font-size: 18px;
+  text-transform: uppercase; 
+  border-radius: 20px;
+  color: white;
+  font-family: sans-serif;
+  margin: 0px 10px; 
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+
+}
+.bttn{
+  display: inline-block;
+}
+.start button{
+  background-color: #38b305
+}
+.reset button{
+  background-color:#2da3e5;
+}
