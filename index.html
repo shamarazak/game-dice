@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+
     <title>Dice game</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -23,7 +25,8 @@
         <div class="main-content">
             <div class="container">
                 <div class="score">
-                    <div class="player1 player">
+                    <div class="player1 player current-player">
+            
                         <p>Player 1</p>
                         <div class="total">
                             Total Score
@@ -33,7 +36,9 @@
                             Current score
                             <h2>13</h2>
                         </div>
-                        <button>Roll on</button>
+                        <div>
+                        <button>Roll on</button> </div>
+                        
 
                     </div>
                     <div class="against">
@@ -50,18 +55,21 @@
                             <h2>14</h2>
                         </div>
                         <button>Roll on</button>
+                        
                     </div>
                     <div class="buttons"> 
                         <div class="start bttn">
-                            <button>Start</button>
+                            <!--<button id="start-btn"onclick="myFunction()">Start</button>-->
+                            <input type="button" onclick="change()" value="Start" class="start bttn" id="startbtn">
                         </div>
-                        <div class="reset bttn">
-                            <button>Reset</button>
+                        <div class="hold bttn">
+                            <button>Hold</button>
                         </div>
                     </div>
                 </div> 
             </div>
         </div> 
     </div> 
+    <script src="./js/script.js"></script>
 </body>
 </html>

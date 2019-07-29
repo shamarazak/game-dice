@@ -74,6 +74,7 @@ body{
   background-color:#3f0d12;
   background-image:linear-gradient(315deg, #3f0d12 0%, #c73b1f 74%);  
   float: left;
+  
 }
 .against{
   float: left;
@@ -85,9 +86,7 @@ body{
   width: 100%;
      margin-top: 100px;
 }
-.player1{ 
-    float: left; 
-} 
+
 .total{
    padding: 15px 0px;
 }
@@ -124,7 +123,7 @@ body{
     margin-top:50px;
     margin-bottom: 50px
 }
-.bttn button{
+.bttn button,input[type="button"]{
   padding: 8px 30px;
   font-size: 18px;
   text-transform: uppercase; 
@@ -135,12 +134,32 @@ body{
   box-shadow: 0px 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
 
 }
+input[type="button"]{
+  background-color: #38b305;
+}
 .bttn{
   display: inline-block;
 }
 .start button{
-  background-color: #38b305
+  background-color: #38b305;
 }
-.reset button{
+.hold button{
   background-color:#2da3e5;
+}
+.current-player{
+box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #4aff00, 0 0 45px 12px #0ff;
+animation:glow 1s;
+-moz-animation:glow 1s infinite; /* Firefox */
+-webkit-animation:glow 1s infinite; /* Safari and Chrome */
+}
+@-moz-keyframes glow{0% {
+      box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #4aff00, 0 0 45px 12px #0ff;
+    }50% {box-shadow: 0 0 43px 10px #fff, 0 0 60px 18px #4aff00, 0 0 65px 12px #0ff;}
+    100% {box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #4aff00, 0 0 45px 12px #0ff;}
+
+}
+@-webkit-keyframes glow
+{0% {box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #4aff00, 0 0 45px 12px #0ff;}
+50% {box-shadow: 0 0 43px 10px #fff, 0 0 60px 18px #4aff00, 0 0 65px 12px #0ff;}
+100% {box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #4aff00, 0 0 45px 12px #0ff;}
 }
