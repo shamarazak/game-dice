@@ -17,53 +17,54 @@
         <div class="header">
             <div class="container">
                 <h1>Roll Dice</h1>
-                <div class="diceimg">
-                   <img src="img/dice.png" alt="dice">
+                <div class="diceimg" id="randomimg">
+                   
                 </div>                
             </div>
         </div>
         <div class="main-content">
             <div class="container">
                 <div class="score">
-                    <div class="player1 player current-player">
-            
+                    <div class="player1 player" >
+                    <div class="current-player" id="active-player0"></div>
                         <p>Player 1</p>
                         <div class="total">
                             Total Score
-                            <h2>58</h2>
+                            <h2 id=total0>58</h2>
                         </div>
                         <div class="current">
                             Current score
-                            <h2>13</h2>
+                            <h2 id="current0">13</h2>
                         </div>
                         <div>
-                        <button>Roll on</button> </div>
+                            
+                        <button onclick="randomnumber()">Roll on</button> </div>
                         
 
                     </div>
                     <div class="against">
                         <img src="img/vs.png" alt="img">
                     </div>
-                    <div class="player2 player">
+                    <div class="player2 player current-player" id="active-player1">
                         <p>Player 2</p> 
                         <div class="total">
                             Total score
-                            <h2>53</h2>
+                            <h2 id="total1">53</h2>
                         </div>
                         <div class="current">
                             Current Score
-                            <h2>14</h2>
+                            <h2 id="current1">14</h2>
                         </div>
-                        <button>Roll on</button>
+                        <button onclick="randomnumber1()">Roll on</button>
                         
                     </div>
                     <div class="buttons"> 
                         <div class="start bttn">
                             <!--<button id="start-btn"onclick="myFunction()">Start</button>-->
-                            <input type="button" onclick="change()" value="Start" class="start bttn" id="startbtn">
+                            <input type="button" onclick="start()" value="Start" class="start bttn" id="startbtn">
                         </div>
                         <div class="hold bttn">
-                            <button>Hold</button>
+                            <button onclick="hold()">Hold</button>
                         </div>
                     </div>
                 </div> 
