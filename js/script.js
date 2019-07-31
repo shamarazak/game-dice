@@ -2,26 +2,6 @@ let running = false;
 let cscore=[];
 let tscore=[];
 let activeplayer = 0;
-var imgArray = new Array();
-
-imgArray[0] = new Image();
-imgArray[0].src = 'img/dice1.png';
-
-imgArray[1] = new Image();
-imgArray[1].src = 'img/dice2.png';
-
-imgArray[2] = new Image();
-imgArray[2].src = 'img/dice3.png';
-
-imgArray[3] = new Image();
-imgArray[3].src = 'img/dice4.png';
-
-imgArray[4] = new Image();
-imgArray[4].src = 'img/dice5.png';
-
-imgArray[5] = new Image();
-imgArray[5].src = 'img/dice6.png';
-
 
     function change()
     {
@@ -68,7 +48,42 @@ function randomnumber()
         if (running && activeplayer==0)
         {
             var x = Math.floor((Math.random() * 6) + 1);
-            document.getElementById("randomimg").innerHTML = x;
+            
+            let path;
+            path="img/";
+            switch(x)
+            {
+                case 1:
+                    {
+                        path += "dice1.png";
+                        break;
+                    }
+                    case 2:
+                    {
+                        path += "dice2.png";
+                        break;
+                    }case 3:
+                    {
+                        path += "dice3.png";
+                        break;
+                    }case 4:
+                    {
+                        path += "dice4.png";
+                        break;
+                    }case 5:
+                    {
+                        path += "dice5.png";
+                        break;
+                    }case 6:
+                    {
+                        path += "dice6.png";
+                        break;
+                    }
+            }
+            
+            var img=document.getElementById("imgpp");
+            console.log(img);
+             img.src=path;
         
 
         if(x!=1) 
@@ -121,7 +136,42 @@ function randomnumber1()
     if (running && activeplayer==1)
         {
             var y= Math.floor((Math.random() * 6) + 1);
-            document.getElementById("randomimg").innerHTML = y;
+            
+            let path;
+            path="img/";
+            switch(y)
+            {
+                case 1:
+                    {
+                        path += "dice1.png";
+                        break;
+                    }
+                    case 2:
+                    {
+                        path += "dice2.png";
+                        break;
+                    }case 3:
+                    {
+                        path += "dice3.png";
+                        break;
+                    }case 4:
+                    {
+                        path += "dice4.png";
+                        break;
+                    }case 5:
+                    {
+                        path += "dice5.png";
+                        break;
+                    }case 6:
+                    {
+                        path += "dice6.png";
+                        break;
+                    }
+            }
+            
+            var img=document.getElementById("imgpp");
+            console.log(img);
+             img.src=path;
         
 
         if(y!=1) 
@@ -140,4 +190,5 @@ function randomnumber1()
     }
     
 }
+
 
