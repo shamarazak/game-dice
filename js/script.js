@@ -3,14 +3,29 @@ let cscore=[];
 let tscore=[];
 let activeplayer = 0;
 
+
     function change()
     {
         var elem=document.getElementById("startbtn").value;
-        if(elem=="Start")
-        document.getElementById("startbtn").value="Stop"; 
-        else
+        if(elem=="Start"){
+            
+        document.getElementById("startbtn").value="Stop";
+      /*  document.getElementById("active-player0").classList.remove("current-player");
+        document.getElementById("active-player1").classList.remove("current-player");*/
+    } 
+        else{
+            running=!running;
+            cscore = [0,0];
+            tscore = [0,0];
+            document.getElementById("total0").innerHTML=0;
+            document.getElementById("total1").innerHTML=0;
+            document.getElementById("current0").innerHTML=0;
+            document.getElementById("current1").innerHTML=0;
+            
         document.getElementById("startbtn").value="Start"; 
-    }   
+        document.getElementById("active-player0").classList.remove("current-player");
+            document.getElementById("active-player1").classList.remove("current-player");
+    }   }
 function start()
 {
     running=true;
@@ -23,18 +38,11 @@ function start()
     document.getElementById("current1").innerHTML=0;
     change();
     activeplayer = 0;
+    if( activeplayer==0 && running)
+        document.getElementById("active-player0").classList.add("current-player");
+   
     }
-    else
-    {
-        running=false;
-        cscore = [0,0];
-        tscore = [0,0];
-        document.getElementById("total0").innerHTML=0;
-        document.getElementById("total1").innerHTML=0;
-        document.getElementById("current0").innerHTML=0;
-        document.getElementById("current1").innerHTML=0;
-        change();
-    }
+    
 }
 function randomnumber() 
     {   
@@ -42,6 +50,32 @@ function randomnumber()
         {
             var x = Math.floor((Math.random() * 6) + 1);
             document.getElementById("randomimg").innerHTML = x;
+          /* switch(x)
+           {
+               case(1):
+               document.getElementById("img1").src="img/dice1.png";
+               break;
+               case(2):
+               document.getElementById("img1").src="img/dice2.png";
+               break;
+               case(3):
+               document.getElementById("img1").src="img/dice3.png";
+               break;
+               case(4):
+               document.getElementById("img1").src="img/dice4.png";
+               break;
+               case(5):
+               document.getElementById("img1").src="img/dice5.png";
+               break;
+               case(6):
+               document.getElementById("img1").src="img/dice6.png";
+               break;
+               
+           }*/
+           
+               document.getElementById("img1").src="img/dice1.png";
+               
+
         
 
         if(x!=1) 
@@ -57,6 +91,9 @@ function randomnumber()
             cscore[activeplayer] = 0;
             document.getElementById("current0").innerHTML=0;
             activeplayer = 1;
+            document.getElementById("active-player1").classList.add("current-player");
+            document.getElementById("active-player0").classList.remove("current-player");
+
         }
     }
     
@@ -70,6 +107,8 @@ function hold()
         cscore[activeplayer]=0;
         document.getElementById("current0").innerHTML=cscore[activeplayer];
         activeplayer=1;
+        document.getElementById("active-player1").classList.add("current-player");
+        document.getElementById("active-player0").classList.remove("current-player");
        
     }
     else if (running && activeplayer==1)
@@ -79,6 +118,8 @@ function hold()
         cscore[activeplayer]=0;
         document.getElementById("current1").innerHTML=cscore[activeplayer];
         activeplayer = 0;
+        document.getElementById("active-player0").classList.add("current-player");
+        document.getElementById("active-player1").classList.remove("current-player");
         
     }
 }
@@ -100,14 +141,10 @@ function randomnumber1()
             cscore[activeplayer] = 0;
             document.getElementById("current1").innerHTML=0;
             activeplayer = 0;
-
+            document.getElementById("active-player0").classList.add("current-player");
+            document.getElementById("active-player1").classList.remove("current-player");
         }
     }
     
 }
 
-        
-        //var q = document.getElementById('active-player1');
-        if (activeplayer==0) {
-           document.getElementById("active-player0").style.visibility = "visible"; }
-           //document.getElementsByClassName("current-player").style.visibility = "hidden";}
