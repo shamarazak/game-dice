@@ -2,6 +2,25 @@ let running = false;
 let cscore=[];
 let tscore=[];
 let activeplayer = 0;
+var imgArray = new Array();
+
+imgArray[0] = new Image();
+imgArray[0].src = 'img/dice1.png';
+
+imgArray[1] = new Image();
+imgArray[1].src = 'img/dice2.png';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'img/dice3.png';
+
+imgArray[3] = new Image();
+imgArray[3].src = 'img/dice4.png';
+
+imgArray[4] = new Image();
+imgArray[4].src = 'img/dice5.png';
+
+imgArray[5] = new Image();
+imgArray[5].src = 'img/dice6.png';
 
 
     function change()
@@ -50,32 +69,6 @@ function randomnumber()
         {
             var x = Math.floor((Math.random() * 6) + 1);
             document.getElementById("randomimg").innerHTML = x;
-          /* switch(x)
-           {
-               case(1):
-               document.getElementById("img1").src="img/dice1.png";
-               break;
-               case(2):
-               document.getElementById("img1").src="img/dice2.png";
-               break;
-               case(3):
-               document.getElementById("img1").src="img/dice3.png";
-               break;
-               case(4):
-               document.getElementById("img1").src="img/dice4.png";
-               break;
-               case(5):
-               document.getElementById("img1").src="img/dice5.png";
-               break;
-               case(6):
-               document.getElementById("img1").src="img/dice6.png";
-               break;
-               
-           }*/
-           
-               document.getElementById("img1").src="img/dice1.png";
-               
-
         
 
         if(x!=1) 
