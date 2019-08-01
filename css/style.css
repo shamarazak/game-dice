@@ -163,3 +163,21 @@ animation:glow 1s;
 50% {box-shadow: 0 0 43px 10px #fff, 0 0 60px 18px #4aff00, 0 0 65px 12px #0ff;}
 100% {box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #4aff00, 0 0 45px 12px #0ff;}
 }
+.winnerbox
+{
+box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px#fa5203, 0 0 45px 12px rgb(255, 0, 0);
+animation:glow 1s;
+-moz-animation:glow-1 1s infinite; /* Firefox */
+-webkit-animation:glow-1 1s infinite; /* Safari and Chrome */
+}
+@-moz-keyframes glow-1{0% {
+      box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #fa5203, 0 0 45px 12px rgb(255, 0, 0);
+    }50% {box-shadow: 0 0 43px 10px #fff, 0 0 60px 18px #fa5203, 0 0 65px 12px rgb(255, 0, 0);}
+    100% {box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #fa5203, 0 0 45px 12px rgb(255, 0, 0);}
+
+}
+@-webkit-keyframes glow-1
+{0% {box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #fa5203, 0 0 45px 12px rgb(255, 0, 0);;}
+50% {box-shadow: 0 0 43px 10px #fff, 0 0 60px 18px #fa5203, 0 0 65px 12px rgb(255, 0, 0);}
+100% {box-shadow: 0 0 43px 10px #fff, 0 0 40px 18px #fa5203, 0 0 45px 12px rgb(255, 0, 0);}
+}

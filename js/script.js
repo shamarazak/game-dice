@@ -2,6 +2,7 @@ let running = false;
 let cscore=[];
 let tscore=[];
 let activeplayer = 0;
+let winner=20;
 
     function change()
     {
@@ -108,27 +109,46 @@ function randomnumber()
        
     }
 function hold()
-{   if(running && activeplayer==0)
+
+{   let winner=20;
+    if(running && activeplayer==0)
     {
         tscore[activeplayer]=tscore[activeplayer]+cscore[activeplayer];
         document.getElementById("total0").innerHTML=tscore[activeplayer];
+
         cscore[activeplayer]=0;
+
         document.getElementById("current0").innerHTML=cscore[activeplayer];
+        if(tscore[activeplayer]>=winner)
+        {
+            document.getElementById("active-player0").classList.add("winnerbox");
+            
+        }
+        else{
         activeplayer=1;
         document.getElementById("active-player1").classList.add("current-player");
         document.getElementById("active-player0").classList.remove("current-player");
-       
+        }
     }
     else if (running && activeplayer==1)
     {
         tscore[activeplayer]=tscore[activeplayer]+cscore[activeplayer];
+
         document.getElementById("total1").innerHTML=tscore[activeplayer];
+
         cscore[activeplayer]=0;
         document.getElementById("current1").innerHTML=cscore[activeplayer];
+        if(tscore[activeplayer]>=winner)
+        {
+            document.getElementById("active-player1").classList.add("winnerbox");
+            
+            
+        }
+        else{
         activeplayer = 0;
         document.getElementById("active-player0").classList.add("current-player");
         document.getElementById("active-player1").classList.remove("current-player");
-        
+        }
     }
 }
 function randomnumber1()
@@ -190,5 +210,17 @@ function randomnumber1()
     }
     
 }
+/*if(tscore[0]>=winner && activeplayer==0)
+{
+    alert("player1won");
+    document.getElementById("active-player0").classList.add("winnerbox");
+
+}
+else if(tscore[1]>=winner && activeplayer==1)
+{
+    alert("player 2 won");
+
+    document.getElementById("active-player1").classList.add("winnerbox");
+}*/
 
 
