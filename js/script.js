@@ -122,7 +122,7 @@ function hold()
         if(tscore[activeplayer]>=winner)
         {
             document.getElementById("active-player0").classList.add("winnerbox");
-            
+           running=false;
         }
         else{
         activeplayer=1;
