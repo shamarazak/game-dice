@@ -10,8 +10,7 @@ let winner=20;
         if(elem=="Start"){
             
         document.getElementById("startbtn").value="Stop";
-      /*  document.getElementById("active-player0").classList.remove("current-player");
-        document.getElementById("active-player1").classList.remove("current-player");*/
+     
     } 
         else{
             running=!running;
@@ -21,7 +20,7 @@ let winner=20;
             document.getElementById("total1").innerHTML=0;
             document.getElementById("current0").innerHTML=0;
             document.getElementById("current1").innerHTML=0;
-            
+            document.getElementById("active-player0").classList.remove("winnerbox");
         document.getElementById("startbtn").value="Start"; 
         document.getElementById("active-player0").classList.remove("current-player");
             document.getElementById("active-player1").classList.remove("current-player");
@@ -40,6 +39,7 @@ function start()
     activeplayer = 0;
     if( activeplayer==0 && running)
         document.getElementById("active-player0").classList.add("current-player");
+        document.getElementById("crownimg").classList.add("fas fa-crown");
    
     }
     
@@ -68,6 +68,7 @@ function randomnumber()
                         path += "dice3.png";
                         break;
                     }case 4:
+   
                     {
                         path += "dice4.png";
                         break;
@@ -122,7 +123,8 @@ function hold()
         if(tscore[activeplayer]>=winner)
         {
             document.getElementById("active-player0").classList.add("winnerbox");
-           running=false;
+           running=!running;
+           
         }
         else{
         activeplayer=1;
@@ -141,7 +143,8 @@ function hold()
         if(tscore[activeplayer]>=winner)
         {
             document.getElementById("active-player1").classList.add("winnerbox");
-            
+            running=!running;
+   
             
         }
         else{
@@ -210,17 +213,5 @@ function randomnumber1()
     }
     
 }
-/*if(tscore[0]>=winner && activeplayer==0)
-{
-    alert("player1won");
-    document.getElementById("active-player0").classList.add("winnerbox");
-
-}
-else if(tscore[1]>=winner && activeplayer==1)
-{
-    alert("player 2 won");
-
-    document.getElementById("active-player1").classList.add("winnerbox");
-}*/
 
 
